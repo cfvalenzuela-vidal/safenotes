@@ -1,0 +1,742 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2025-06-16T23:26:28.4218879-04:00",
+  "ArtifactName": ".",
+  "ArtifactType": "filesystem",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "type": "",
+        "diff_ids": null
+      },
+      "config": {}
+    }
+  },
+  "Results": [
+    {
+      "Target": "package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "GHSA-j4mr-9xw3-c9jx",
+          "PkgID": "base64-url@1.2.1",
+          "PkgName": "base64-url",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/base64-url@1.2.1",
+            "UID": "b8243f050ac4667c"
+          },
+          "InstalledVersion": "1.2.1",
+          "FixedVersion": "2.0.0",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://github.com/advisories/GHSA-j4mr-9xw3-c9jx",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "Out-of-bounds Read in base64-url",
+          "Description": "Versions of `base64-url` before 2.0.0 are vulnerable to out-of-bounds read as it allocates uninitialized Buffers when number is passed in input.\n\n\n## Recommendation\n\nUpdate to version 2.0.0 or later.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "ghsa": 3
+          },
+          "References": [
+            "https://hackerone.com/reports/321692",
+            "https://www.npmjs.com/advisories/660"
+          ],
+          "PublishedDate": "2019-05-31T23:47:01Z",
+          "LastModifiedDate": "2020-08-31T18:31:43Z"
+        },
+        {
+          "VulnerabilityID": "NSWG-ECO-434",
+          "PkgID": "base64-url@1.2.1",
+          "PkgName": "base64-url",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/base64-url@1.2.1",
+            "UID": "b8243f050ac4667c"
+          },
+          "InstalledVersion": "1.2.1",
+          "FixedVersion": "\u003e=2.0.0",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "nodejs-security-wg",
+          "PrimaryURL": "https://hackerone.com/reports/321692",
+          "DataSource": {
+            "ID": "nodejs-security-wg",
+            "Name": "Node.js Ecosystem Security Working Group",
+            "URL": "https://github.com/nodejs/security-wg"
+          },
+          "Title": "Out-of-bounds Read",
+          "Description": "`base64-url` below 2.0 allocates uninitialized Buffers when number is passed in input",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "nodejs-security-wg": 3
+          },
+          "References": [
+            "https://hackerone.com/reports/321692"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2024-47178",
+          "PkgID": "basic-auth-connect@1.0.0",
+          "PkgName": "basic-auth-connect",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/basic-auth-connect@1.0.0",
+            "UID": "bc3c669809dd7a91"
+          },
+          "InstalledVersion": "1.0.0",
+          "FixedVersion": "1.1.0",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-47178",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "basic-auth-connect: timing-unsafe equality comparison can leak timing information",
+          "Description": "basic-auth-connect is Connect's Basic Auth middleware in its own module. basic-auth-connect \u003c 1.1.0 uses a timing-unsafe equality comparison that can leak timing information. This issue has been fixed in basic-auth-connect 1.1.0.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-208"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 2,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-47178",
+            "https://github.com/expressjs/basic-auth-connect",
+            "https://github.com/expressjs/basic-auth-connect/commit/bac1e6a8530e1efd0028800b9b588a37adb0d203",
+            "https://github.com/expressjs/basic-auth-connect/security/advisories/GHSA-7p89-p6hx-q4fw",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-47178",
+            "https://www.cve.org/CVERecord?id=CVE-2024-47178"
+          ],
+          "PublishedDate": "2024-09-30T16:15:09.41Z",
+          "LastModifiedDate": "2024-11-15T18:05:22.603Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2024-45590",
+          "PkgID": "body-parser@1.13.3",
+          "PkgName": "body-parser",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/body-parser@1.13.3",
+            "UID": "a16ec65f008414cc"
+          },
+          "InstalledVersion": "1.13.3",
+          "FixedVersion": "1.20.3",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2024-45590",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "body-parser: Denial of Service Vulnerability in body-parser",
+          "Description": "body-parser is Node.js body parsing middleware. body-parser \u003c1.20.3 is vulnerable to denial of service when url encoding is enabled. A malicious actor using a specially crafted payload could flood the server with a large number of requests, resulting in denial of service. This issue is patched in 1.20.3.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-405"
+          ],
+          "VendorSeverity": {
+            "azure": 3,
+            "cbl-mariner": 3,
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2024-45590",
+            "https://github.com/expressjs/body-parser",
+            "https://github.com/expressjs/body-parser/commit/b2695c4450f06ba3b0ccf48d872a229bb41c9bce",
+            "https://github.com/expressjs/body-parser/security/advisories/GHSA-qwcr-r2fm-qrc7",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-45590",
+            "https://www.cve.org/CVERecord?id=CVE-2024-45590"
+          ],
+          "PublishedDate": "2024-09-10T16:15:21.083Z",
+          "LastModifiedDate": "2024-09-20T16:26:44.977Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-20165",
+          "PkgID": "debug@2.2.0",
+          "PkgName": "debug",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/debug@2.2.0",
+            "UID": "f2550fa371d2f9de"
+          },
+          "InstalledVersion": "2.2.0",
+          "FixedVersion": "3.1.0, 2.6.9",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-20165",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "A vulnerability classified as problematic has been found in debug-js d ...",
+          "Description": "A vulnerability classified as problematic has been found in debug-js debug up to 3.0.x. This affects the function useColors of the file src/node.js. The manipulation of the argument str leads to inefficient regular expression complexity. Upgrading to version 3.1.0 is able to address this issue. The identifier of the patch is c38a0166c266a679c8de012d4eaccec3f944e685. It is recommended to upgrade the affected component. The identifier VDB-217665 was assigned to this vulnerability.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-1333"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/debug-js/debug",
+            "https://github.com/debug-js/debug/commit/c38a0166c266a679c8de012d4eaccec3f944e685",
+            "https://github.com/debug-js/debug/commit/f53962e944a87e6ca9bb622a2a12dffc22a9bb5a",
+            "https://github.com/debug-js/debug/pull/504",
+            "https://github.com/debug-js/debug/releases/tag/2.6.9",
+            "https://github.com/debug-js/debug/releases/tag/3.1.0",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-20165",
+            "https://vuldb.com/?ctiid.217665",
+            "https://vuldb.com/?id.217665"
+          ],
+          "PublishedDate": "2023-01-09T10:15:10.447Z",
+          "LastModifiedDate": "2024-11-21T03:22:47.22Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-16119",
+          "PkgID": "fresh@0.3.0",
+          "PkgName": "fresh",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/fresh@0.3.0",
+            "UID": "dabb7da36cb8b14a"
+          },
+          "InstalledVersion": "0.3.0",
+          "FixedVersion": "0.5.2",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-16119",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-fresh: Regular expression denial of service when parsing crafted user input",
+          "Description": "Fresh is a module used by the Express.js framework for HTTP response freshness testing. It is vulnerable to a regular expression denial of service when it is passed specially crafted input to parse. This causes the event loop to be blocked causing a denial of service condition.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2017-16119",
+            "https://github.com/advisories/GHSA-9qj9-36jm-prpv",
+            "https://nodesecurity.io/advisories/526",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-16119",
+            "https://www.cve.org/CVERecord?id=CVE-2017-16119",
+            "https://www.npmjs.com/advisories/526"
+          ],
+          "PublishedDate": "2018-06-07T02:29:02.987Z",
+          "LastModifiedDate": "2024-11-21T03:15:51.53Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2017-16138",
+          "PkgID": "mime@1.3.4",
+          "PkgName": "mime",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/mime@1.3.4",
+            "UID": "679418523394cbcf"
+          },
+          "InstalledVersion": "1.3.4",
+          "FixedVersion": "2.0.3, 1.4.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-16138",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-mime: Regular expression Denial of Service",
+          "Description": "The mime module \u003c 1.4.1, 2.0.1, 2.0.2 is vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2017-16138",
+            "https://github.com/broofa/mime",
+            "https://github.com/broofa/mime/commit/1df903fdeb9ae7eaa048795b8d580ce2c98f40b0",
+            "https://github.com/broofa/mime/commit/855d0c4b8b22e4a80b9401a81f2872058eae274d",
+            "https://github.com/broofa/node-mime/commit/1df903fdeb9ae7eaa048795b8d580ce2c98f40b0 (2.x)",
+            "https://github.com/broofa/node-mime/commit/855d0c4b8b22e4a80b9401a81f2872058eae274d (1.x)",
+            "https://github.com/broofa/node-mime/issues/167",
+            "https://nodesecurity.io/advisories/535",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-16138",
+            "https://www.cve.org/CVERecord?id=CVE-2017-16138"
+          ],
+          "PublishedDate": "2018-06-07T02:29:03.863Z",
+          "LastModifiedDate": "2024-11-21T03:15:53.823Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2021-44906",
+          "PkgID": "minimist@0.0.8",
+          "PkgName": "minimist",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/minimist@0.0.8",
+            "UID": "ab3c59f09b1e5c55"
+          },
+          "InstalledVersion": "0.0.8",
+          "FixedVersion": "1.2.6, 0.2.4",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44906",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "minimist: prototype pollution",
+          "Description": "Minimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "ghsa": 4,
+            "nvd": 4,
+            "oracle-oval": 2,
+            "redhat": 2,
+            "rocky": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0321",
+            "https://access.redhat.com/security/cve/CVE-2021-44906",
+            "https://bugzilla.redhat.com/2066009",
+            "https://bugzilla.redhat.com/2130518",
+            "https://bugzilla.redhat.com/2134609",
+            "https://bugzilla.redhat.com/2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2066009",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2130518",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2134609",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2142808",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35256",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43548",
+            "https://errata.almalinux.org/9/ALSA-2023-0321.html",
+            "https://errata.rockylinux.org/RLSA-2023:0321",
+            "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip",
+            "https://github.com/advisories/GHSA-xvch-5gv4-984h",
+            "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703",
+            "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb",
+            "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d",
+            "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11",
+            "https://github.com/minimistjs/minimist/commits/v0.2.4",
+            "https://github.com/minimistjs/minimist/issues/11",
+            "https://github.com/minimistjs/minimist/pull/24",
+            "https://github.com/substack/minimist",
+            "https://github.com/substack/minimist/blob/master/index.js#L69",
+            "https://github.com/substack/minimist/issues/164",
+            "https://linux.oracle.com/cve/CVE-2021-44906.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0321.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-44906",
+            "https://security.netapp.com/advisory/ntap-20240621-0006",
+            "https://security.netapp.com/advisory/ntap-20240621-0006/",
+            "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
+            "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068",
+            "https://www.cve.org/CVERecord?id=CVE-2021-44906"
+          ],
+          "PublishedDate": "2022-03-17T16:15:07.51Z",
+          "LastModifiedDate": "2024-11-21T06:31:40.98Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2019-5413",
+          "PkgID": "morgan@1.6.1",
+          "PkgName": "morgan",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/morgan@1.6.1",
+            "UID": "a886a40e9282228c"
+          },
+          "InstalledVersion": "1.6.1",
+          "FixedVersion": "1.9.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2019-5413",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-morgan: Unescaped input in compile() function",
+          "Description": "An attacker can use the format parameter to inject arbitrary commands in the npm package morgan \u003c 1.9.1.",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-94",
+            "CWE-77"
+          ],
+          "VendorSeverity": {
+            "ghsa": 4,
+            "nvd": 4,
+            "redhat": 1
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2019-5413",
+            "https://github.com/advisories/GHSA-gwg9-rgvj-4h5j",
+            "https://github.com/nodejs/security-wg/blob/master/vuln/npm/473.json",
+            "https://hackerone.com/reports/390881",
+            "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3%40%3Ccommits.netbeans.apache.org%3E",
+            "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E",
+            "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63%40%3Cnotifications.netbeans.apache.org%3E",
+            "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E",
+            "https://nvd.nist.gov/vuln/detail/CVE-2019-5413",
+            "https://www.cve.org/CVERecord?id=CVE-2019-5413",
+            "https://www.npmjs.com/advisories/736"
+          ],
+          "PublishedDate": "2019-03-21T16:01:05.39Z",
+          "LastModifiedDate": "2024-11-21T04:44:53.297Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2016-10539",
+          "PkgID": "negotiator@0.5.3",
+          "PkgName": "negotiator",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/negotiator@0.5.3",
+            "UID": "f3e42933a220cf74"
+          },
+          "InstalledVersion": "0.5.3",
+          "FixedVersion": "0.6.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2016-10539",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "negotiator is an HTTP content negotiator for Node.js and is used by ma ...",
+          "Description": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa. The header for \"Accept-Language\", when parsed by negotiator 0.6.0 and earlier is vulnerable to Regular Expression Denial of Service via a specially crafted string.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-400",
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "ubuntu": 2
+          },
+          "CVSS": {
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://github.com/advisories/GHSA-7mc5-chhp-fmc3",
+            "https://nodesecurity.io/advisories/106",
+            "https://nvd.nist.gov/vuln/detail/CVE-2016-10539",
+            "https://www.cve.org/CVERecord?id=CVE-2016-10539",
+            "https://www.npmjs.com/advisories/106"
+          ],
+          "PublishedDate": "2018-05-31T20:29:01.407Z",
+          "LastModifiedDate": "2024-11-21T02:44:13.653Z"
+        },
+        {
+          "VulnerabilityID": "NSWG-ECO-106",
+          "PkgID": "negotiator@0.5.3",
+          "PkgName": "negotiator",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/negotiator@0.5.3",
+            "UID": "f3e42933a220cf74"
+          },
+          "InstalledVersion": "0.5.3",
+          "FixedVersion": "\u003e= 0.6.1",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "nodejs-security-wg",
+          "DataSource": {
+            "ID": "nodejs-security-wg",
+            "Name": "Node.js Ecosystem Security Working Group",
+            "URL": "https://github.com/nodejs/security-wg"
+          },
+          "Title": "Regular Expression Denial of Service",
+          "Description": "negotiator is an HTTP content negotiator for Node.js and is used by many modules and frameworks including Express and Koa.\n\nThe header for \"Accept-Language\", when parsed by negotiator is vulnerable to Regular Expression Denial of Service via a specially crafted string. \n\nTimeline\n\n- April 29th 2016 - Initial report to maintainers\n- April 29th 2016 - Confirm receipt from maintainers\n- May 1st 2016 - Fix confirmed\n- May 5th 2016 - 0.6.1 published with fix\n- June 16th 2016 - Advisory published (delay was to coordinate fixes in upstream frameworks, Koa and Express)",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "nodejs-security-wg": 3
+          },
+          "References": [
+            "https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS"
+          ]
+        },
+        {
+          "VulnerabilityID": "CVE-2017-1000048",
+          "PkgID": "qs@4.0.0",
+          "PkgName": "qs",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/qs@4.0.0",
+            "UID": "3388d0bb48ed0d7a"
+          },
+          "InstalledVersion": "4.0.0",
+          "FixedVersion": "6.0.4, 6.1.2, 6.2.3, 6.3.2",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2017-1000048",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-qs: Prototype override protection bypass",
+          "Description": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-20"
+          ],
+          "VendorSeverity": {
+            "ghsa": 3,
+            "nvd": 3,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V2Score": 5,
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "V3Score": 5.3
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2017:2672",
+            "https://access.redhat.com/security/cve/CVE-2017-1000048",
+            "https://github.com/ljharb/qs",
+            "https://github.com/ljharb/qs/commit/beade029171b8cef9cee0d03ebe577e2dd84976d",
+            "https://github.com/ljharb/qs/issues/200",
+            "https://nvd.nist.gov/vuln/detail/CVE-2017-1000048",
+            "https://snyk.io/vuln/npm:qs:20170213",
+            "https://www.cve.org/CVERecord?id=CVE-2017-1000048",
+            "https://www.npmjs.com/advisories/1469"
+          ],
+          "PublishedDate": "2017-07-17T13:18:17.453Z",
+          "LastModifiedDate": "2025-04-20T01:37:25.86Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2022-24999",
+          "PkgID": "qs@4.0.0",
+          "PkgName": "qs",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/qs@4.0.0",
+            "UID": "3388d0bb48ed0d7a"
+          },
+          "InstalledVersion": "4.0.0",
+          "FixedVersion": "6.10.3, 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, 6.2.4",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2022-24999",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "express: \"qs\" prototype poisoning causes the hang of the node process",
+          "Description": "qs before 6.10.3, as used in Express before 4.17.3 and other products, allows attackers to cause a Node process hang for an Express application because an __ proto__ key can be used. In many typical Express use cases, an unauthenticated remote attacker can place the attack payload in the query string of the URL that is used to visit the application, such as a[__proto__]=b\u0026a[__proto__]\u0026a[length]=100000000. The fix was backported to qs 6.9.7, 6.8.3, 6.7.3, 6.6.1, 6.5.3, 6.4.1, 6.3.3, and 6.2.4 (and therefore Express 4.17.3, which has \"deps: qs@6.9.7\" in its release description, is not vulnerable).",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "ghsa": 3,
+            "nvd": 3,
+            "oracle-oval": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 7.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0050",
+            "https://access.redhat.com/security/cve/CVE-2022-24999",
+            "https://bugzilla.redhat.com/2044591",
+            "https://bugzilla.redhat.com/2066009",
+            "https://bugzilla.redhat.com/2134609",
+            "https://bugzilla.redhat.com/2140911",
+            "https://bugzilla.redhat.com/2150323",
+            "https://errata.almalinux.org/8/ALSA-2023-0050.html",
+            "https://github.com/expressjs/express/releases/tag/4.17.3",
+            "https://github.com/ljharb/qs",
+            "https://github.com/ljharb/qs/commit/4310742efbd8c03f6495f07906b45213da0a32ec",
+            "https://github.com/ljharb/qs/commit/727ef5d34605108acb3513f72d5435972ed15b68",
+            "https://github.com/ljharb/qs/commit/73205259936317b40f447c5cdb71c5b341848e1b",
+            "https://github.com/ljharb/qs/commit/8b4cc14cda94a5c89341b77e5fe435ec6c41be2d",
+            "https://github.com/ljharb/qs/commit/ba24e74dd17931f825adb52f5633e48293b584e1",
+            "https://github.com/ljharb/qs/commit/e799ba57e573a30c14b67c1889c7c04d508b9105",
+            "https://github.com/ljharb/qs/commit/ed0f5dcbef4b168a8ae299d78b1e4a2e9b1baf1f",
+            "https://github.com/ljharb/qs/commit/f945393cfe442fe8c6e62b4156fd35452c0686ee",
+            "https://github.com/ljharb/qs/commit/fc3682776670524a42e19709ec4a8138d0d7afda",
+            "https://github.com/ljharb/qs/pull/428",
+            "https://github.com/n8tz/CVE-2022-24999",
+            "https://linux.oracle.com/cve/CVE-2022-24999.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0050.html",
+            "https://lists.debian.org/debian-lts-announce/2023/01/msg00039.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-24999",
+            "https://security.netapp.com/advisory/ntap-20230908-0005",
+            "https://security.netapp.com/advisory/ntap-20230908-0005/",
+            "https://www.cve.org/CVERecord?id=CVE-2022-24999"
+          ],
+          "PublishedDate": "2022-11-26T22:15:10.153Z",
+          "LastModifiedDate": "2025-04-29T14:15:20.41Z"
+        }
+      ]
+    }
+  ]
+}
