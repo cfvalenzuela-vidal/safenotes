@@ -5,25 +5,16 @@ Alumnos:	Cristian Valenzuela Vidal – cfvalenzuela.vidal@gmail.com
 Ejercicio guiado M3-5: "Seguridad Integrada con DevSecOps” 
 Informe de Seguridad - SafeNotes
 El análisis de seguridad realizado con Trivy en la aplicación SafeNotes reveló más de 7.000 vulnerabilidad (incluyen las de S.O) pero nos enfocaremos en 8 vulnerabilidades en sus dependencias, clasificadas por nivel de severidad. Este informe detalla los hallazgos, acciones recomendadas y responde a las preguntas clave sobre implementación de DevSecOps detalladas en la Tabla 1.
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| Librería            | CVE             | Severidad  | Descripción                                       | Versión Corregida |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| ansi-regex          | CVE-2021-3807   | Alta       | Denegación de servicio (ReDoS) con expresiones ANSI | ≥ 4.1.1           |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| cross-spawn         | CVE-2024-21538  | Alta       | ReDoS en expresiones regulares                    | ≥ 6.0.6           |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| tough-cookie        | CVE-2023-26136  | Alta       | Prototype pollution en almacenamiento de cookies  | ≥ 4.1.3           |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| semver              | CVE-2022-25883  | Alta       | ReDoS en validación de versiones semánticas       | ≥ 5.7.2           |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| http-cache-semantics| CVE-2022-25881  | Alta       | ReDoS por expresiones regulares                   | 4.1.1             |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| got                 | CVE-2022-33987  | Media      | Redirección a sockets UNIX no verificados         | ≥ 11.8.5          |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| tar                 | CVE-2024-28863  | Media      | DoS al procesar archivos TAR                      | 6.2.1             |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+
-| brace-expansion     | CVE-2025-5889   | Baja       | Comportamiento inseguro al expandir patrones      | ≥ 1.1.12          |
-+---------------------+-----------------+------------+---------------------------------------------------+-------------------+     
+| Librería             | CVE             | Severidad  | Descripción                                       | Versión Corregida |
+|----------------------|-----------------|------------|--------------------------------------------------|------------------|
+| `ansi-regex`         | CVE-2021-3807   | Alta       | Denegación de servicio (ReDoS) con ANSI          | ≥ 4.1.1          |
+| `cross-spawn`        | CVE-2024-21538  | Alta       | ReDoS en expresiones regulares                   | ≥ 6.0.6          |
+| `tough-cookie`       | CVE-2023-26136  | Alta       | Prototype pollution en cookies                   | ≥ 4.1.3          |
+| `semver`             | CVE-2022-25883  | Alta       | ReDoS en validación de versiones                 | ≥ 5.7.2          |
+| `http-cache-semantics` | CVE-2022-25881 | Alta       | ReDoS por regex                                  | 4.1.1            |
+| `got`                | CVE-2022-33987  | Media      | Redirección a sockets UNIX no verificados        | ≥ 11.8.5         |
+| `tar`                | CVE-2024-28863  | Media      | DoS al procesar archivos TAR                     | 6.2.1            |
+| `brace-expansion`    | CVE-2025-5889   | Baja       | Comportamiento inseguro en expansión de patrones | ≥ 1.1.12         |  
               Tabla 1. Tabla de Vulnerabilidades Críticas. 
 
 Distribución por Severidad
